@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito Sans", sans-serif;
+  --color-surface: #effcf9;
+  --color-surface-dim: #cfddd9;
+  --color-surface-bright: #effcf9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #e9f7f3;
+  --color-surface-container: #e3f1ed;
+  --color-surface-container-high: #ddebe8;
+  --color-surface-container-highest: #d8e5e2;
+  --color-on-surface: #121e1c;
+  --color-on-surface-variant: #3f4948;
+  --color-inverse-surface: #273331;
+  --color-inverse-on-surface: #e6f4f0;
+  --color-outline: #6f7978;
+  --color-outline-variant: #bec9c7;
+  --color-surface-tint: #1e6965;
+  --color-primary: #004644;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0f5f5c;
+  --color-on-primary-container: #92d6d2;
+  --color-inverse-primary: #8ed3ce;
+  --color-secondary: #37675b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b7eada;
+  --color-on-secondary-container: #3b6b5f;
+  --color-tertiary: #613200;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #834500;
+  --color-on-tertiary-container: #ffbc87;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #aaefeb;
+  --color-primary-fixed-dim: #8ed3ce;
+  --color-on-primary-fixed: #00201f;
+  --color-on-primary-fixed-variant: #00504d;
+  --color-secondary-fixed: #baeddd;
+  --color-secondary-fixed-dim: #9ed1c1;
+  --color-on-secondary-fixed: #002019;
+  --color-on-secondary-fixed-variant: #1d4f43;
+  --color-tertiary-fixed: #ffdcc3;
+  --color-tertiary-fixed-dim: #ffb77d;
+  --color-on-tertiary-fixed: #2f1500;
+  --color-on-tertiary-fixed-variant: #6e3900;
+  --color-background: #effcf9;
+  --color-on-background: #121e1c;
+
+  --font-headline-xl: 48px;
+  --font-headline-xl--line-height: 58px;
+  --font-headline-xl--letter-spacing: -0.02em;
+  --font-headline-xl--font-weight: 800;
+  
+  --font-headline-xl-mobile: 36px;
+  --font-headline-xl-mobile--line-height: 44px;
+  --font-headline-xl-mobile--letter-spacing: -0.01em;
+  --font-headline-xl-mobile--font-weight: 800;
+
+  --font-headline-lg: 36px;
+  --font-headline-lg--line-height: 46px;
+  --font-headline-lg--letter-spacing: -0.01em;
+  --font-headline-lg--font-weight: 700;
+
+  --font-headline-lg-mobile: 28px;
+  --font-headline-lg-mobile--line-height: 36px;
+  --font-headline-lg-mobile--letter-spacing: 0em;
+  --font-headline-lg-mobile--font-weight: 700;
+
+  --font-headline-md: 26px;
+  --font-headline-md--line-height: 34px;
+  --font-headline-md--letter-spacing: 0em;
+  --font-headline-md--font-weight: 700;
+
+  --font-headline-sm: 22px;
+  --font-headline-sm--line-height: 30px;
+  --font-headline-sm--letter-spacing: 0em;
+  --font-headline-sm--font-weight: 700;
+
+  --font-body-lg: 20px;
+  --font-body-lg--line-height: 34px;
+  --font-body-lg--letter-spacing: 0.01em;
+  --font-body-lg--font-weight: 400;
+
+  --font-body-md: 18px;
+  --font-body-md--line-height: 30px;
+  --font-body-md--letter-spacing: 0.01em;
+  --font-body-md--font-weight: 400;
+
+  --font-label-lg: 18px;
+  --font-label-lg--line-height: 24px;
+  --font-label-lg--letter-spacing: 0.02em;
+  --font-label-lg--font-weight: 700;
+
+  --font-label-md: 16px;
+  --font-label-md--line-height: 22px;
+  --font-label-md--letter-spacing: 0.02em;
+  --font-label-md--font-weight: 600;
+
+  --font-label-sm: 14px;
+  --font-label-sm--line-height: 20px;
+  --font-label-sm--letter-spacing: 0.03em;
+  --font-label-sm--font-weight: 600;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-margin: 1.5rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-margin-desktop: 3rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1.25rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-xl: 3rem;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+  }
+}
