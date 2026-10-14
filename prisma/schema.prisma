@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          String    @default("FAMILY") // ADMIN, FAMILY, VOLUNTEER, SENIOR
+  phone         String?
+  accounts      Account[]
+  sessions      Session[]
+  volunteer     VolunteerProfile?
+  seniors       SeniorResident[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model VolunteerProfile {
+  id               String   @id @default(cuid())
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName         String
+  phone            String
+  city             String?  @default("Pune")
+  locality         String?
+  skills           String?  // e.g. "Companionship, Medicine Delivery, Tech Help"
+  availability     String?  // e.g. "Weekends, Morning"
+  status           String   @default("PENDING") // PENDING, VERIFIED, ACTIVE
+  idProofType      String?  // e.g. "Aadhaar", "Voter ID"
+  emergencyContact String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model SeniorResident {
+  id               String           @id @default(cuid())
+  name             String
+  age              Int
+  roomNumber       String?
+  emergencyContact String?
+  status           String           @default("STABLE") // STABLE, ATTENTION, CRITICAL
+  medicalNotes     String?
+  familyUserId     String?
+  familyUser       User?            @relation(fields: [familyUserId], references: [id])
+  careLogs         CareLog[]
+  alerts           EmergencyAlert[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+}
+
+model CareLog {
+  id         String         @id @default(cuid())
+  seniorId   String
+  senior     SeniorResident @relation(fields: [seniorId], references: [id], onDelete: Cascade)
+  title      String
+  category   String         // MEDICATION, MEAL, VITALS, ACTIVITY
+  details    String?
+  status     String         @default("COMPLETED")
+  recordedBy String?
+  createdAt  DateTime       @default(now())
+}
+
+model EmergencyAlert {
+  id        String          @id @default(cuid())
+  seniorId  String?
+  senior    SeniorResident? @relation(fields: [seniorId], references: [id], onDelete: Cascade)
+  message   String
+  severity  String          @default("HIGH") // CRITICAL, HIGH, MEDIUM
+  status    String          @default("ACTIVE") // ACTIVE, RESOLVED
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}

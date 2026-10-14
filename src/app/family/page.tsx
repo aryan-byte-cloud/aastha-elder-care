@@ -1,473 +1,1227 @@
-import React from 'react';
+"use client";
 
-export default function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: `<header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E2D8]"><div class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[24px]">handshake</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight tracking-tight">Saathi</span><span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline leading-none">Senior Community Care India</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl"><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="role-selection" href="#">Role Selection</a><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary text-on-primary font-bold rounded-xl shadow-sm" data-path="family-dashboard" href="#">Family Dashboard</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="volunteer-alerts" href="#">Volunteer Alerts</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="register-volunteer" href="#">Register Volunteer</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-[#F3EEE6] border border-[#E8E2D8] rounded-full text-on-surface-variant font-label-sm text-label-sm"><button class="hover:text-primary font-semibold text-primary transition-colors" type="button">English</button><span class="text-[#D5CEBF]">|</span><button class="hover:text-primary transition-colors" type="button">हिंदी</button><span class="text-[#D5CEBF]">|</span><button class="hover:text-primary transition-colors" type="button">मराठी</button></div><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors" data-path="login" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="hidden lg:inline font-label-md text-label-md">Log In</span></a></div></div></header><main class="w-full pt-20 bg-[#FAF7F2] min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
-<div class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
-<!-- Top Senior Header Profile Card -->
-<section class="w-full bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md md:p-space-lg relative overflow-hidden">
-<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
-<!-- Elder Persona & Location Details -->
-<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
-<div class="relative shrink-0">
-<img class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-sm bg-[#F3EEE6] border border-[#E8E2D8]" data-alt="Warm and dignified portrait photograph of an elderly Indian grandmother, 78-year-old Kamla Deshmukh, wearing an elegant soft cotton saree with gentle smile, seated in a sunlit veranda with potted tulsi plants in background. Natural morning lighting, high-contrast crisp portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDMpmrqR43cJ0axFQu6t-8P-KkY-AGzj-wH2VTK68kulcNkBd52Jg4sIH9sB68oULXH2j-vbU7I-T_wEvztfVZtAq6JHhz5zmHP-FXV-wVpIWhIBD5H3PxpDO4BTj0yF6wPy01MaRDwhe04heQNZxWiqt08MwEqchiSEoyOB3n6uCuY3x9m9wrY4akS4Grnjlls9IrmriWnznVwA4m1oj4DUukNNsqPawVjnaztYCgl1wnkPFIC6K-g"/>
-<span class="absolute bottom-1 right-1 w-6 h-6 rounded-full bg-[#E5F2EC] text-secondary border border-[#C2DFD2] flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
-</span>
-</div>
-<div class="flex flex-col gap-space-xs">
-<div class="flex flex-wrap items-center gap-space-sm">
-<h1 class="font-headline-lg text-headline-lg text-on-surface">Kamla Deshmukh, 78, Sukoon Home, Room 204</h1>
-<!-- Large Reassuring Status Badge -->
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E8F3EE] text-primary border border-[#BDE0D1] font-label-md text-label-md shadow-sm">
-<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-<span class="font-bold">Doing Well &amp; Rested</span>
-</div>
-</div>
-<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md text-on-surface-variant font-body-md text-body-md">
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[20px] text-primary">apartment</span>
-                Sukoon Home, Room 204, Pune
-              </span>
-<span class="hidden sm:inline text-[#D5CEBF]">•</span>
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[20px] text-primary">schedule</span>
-                Last checked: 10:15 AM today [demo]
-              </span>
-</div>
-<div class="flex items-center gap-space-xs mt-1">
-<span class="px-2 py-0.5 rounded bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant font-label-sm text-label-sm">Care Protocol: Tier A</span>
-<span class="px-2 py-0.5 rounded bg-[#E8F3EE] border border-[#BDE0D1] text-primary font-label-sm text-label-sm font-bold">Sukoon Verified</span>
-</div>
-</div>
-</div>
-<!-- Primary Action: Deep Teal Call Sukoon Home -->
-<div class="flex flex-col sm:flex-row w-full lg:w-auto items-stretch sm:items-center gap-space-sm shrink-0">
-<a class="h-[52px] px-space-md bg-primary hover:bg-[#003634] text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-all shadow-sm active:scale-[0.98]" href="#caregivers-section">
-<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
-<span>Call Sukoon Home</span>
-</a>
-<button class="h-[52px] px-space-md bg-[#F3EEE6] hover:bg-[#EAE4D9] text-on-surface border border-[#E8E2D8] rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-all active:scale-[0.98]" onclick="document.getElementById('caregivers-section').scrollIntoView({behavior: 'smooth'})" type="button">
-<span class="material-symbols-outlined text-[22px] text-primary">support_agent</span>
-<span>Contact Care Supervisor</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Live Alert Card: Amber Border & Background Accent -->
-<section class="w-full bg-[#FFFDF7] rounded-xl border-2 border-amber-400/80 shadow-sm p-space-md md:p-space-lg flex flex-col gap-space-md">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 text-amber-900 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[24px]">priority_high</span>
-</div>
-<div>
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300 font-label-sm text-label-sm font-bold uppercase">Resolved Alert</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Log Reference [demo]</span>
-</div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Morning BP medicine delay acknowledged and resolved</h2>
-</div>
-</div>
-<div class="inline-flex items-center gap-1.5 self-start md:self-auto px-space-sm py-1 rounded-full bg-[#E8F3EE] text-primary border border-[#BDE0D1] font-label-sm text-label-sm font-bold">
-<span class="material-symbols-outlined text-[18px]">check_circle</span>
-          Resolved at 9:20 AM
-</div>
-</div>
-<!-- Escalation Stepper -->
-<div class="w-full bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl p-space-md">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
-<!-- Step 1 -->
-<div class="flex flex-col gap-1.5 relative">
-<div class="flex items-center gap-space-xs">
-<span class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center text-label-sm font-label-sm shrink-0 font-bold">1</span>
-<span class="font-label-md text-label-md text-on-surface font-bold">Step 1: Alert Raised</span>
-</div>
-<p class="font-body-md text-body-md text-primary font-bold ml-9">9:15 AM</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant ml-9">Automated dose window reminder logged by system.</p>
-</div>
-<!-- Step 2 -->
-<div class="flex flex-col gap-1.5 relative">
-<div class="flex items-center gap-space-xs">
-<span class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center text-label-sm font-label-sm shrink-0 font-bold">2</span>
-<span class="font-label-md text-label-md text-on-surface font-bold">Step 2: Family Notified</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface font-bold ml-9">9:16 AM</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant ml-9">Priya Deshmukh via WhatsApp &amp; SMS notification.</p>
-</div>
-<!-- Step 3 -->
-<div class="flex flex-col gap-1.5 relative">
-<div class="flex items-center gap-space-xs">
-<span class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center text-label-sm font-label-sm shrink-0 font-bold">3</span>
-<span class="font-label-md text-label-md text-on-surface font-bold">Step 3: Staff in Motion</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface font-bold ml-9">9:18 AM</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant ml-9">Nurse Anjali &amp; Suresh K. acknowledged on floor pager.</p>
-</div>
-<!-- Step 4 -->
-<div class="flex flex-col gap-1.5 relative">
-<div class="flex items-center gap-space-xs">
-<span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-label-sm font-label-sm shrink-0 shadow-sm font-bold">
-<span class="material-symbols-outlined text-[18px]">done_all</span>
-</span>
-<span class="font-label-md text-label-md text-primary font-bold">Step 4: Resolved</span>
-</div>
-<p class="font-body-md text-body-md text-primary font-bold ml-9">Administered at 9:20 AM</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant ml-9">Dose completed with water by Nurse Anjali. Confirmed settled.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Main Asymmetric Bento: Left is Today's Medicines, Right is Health Timeline & Vitals -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
-<!-- Left Column: Medicines Management (7 cols) -->
-<div class="lg:col-span-7 flex flex-col gap-space-lg">
-<!-- Medicines Header Card -->
-<div class="bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md md:p-space-lg flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Daily Regimen</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Today's Medicines</h2>
-</div>
-<span class="px-space-sm py-1 rounded-full bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant font-label-sm text-label-sm">
-              Today's Schedule [demo]
+import React, { useState, useEffect, useMemo, useRef } from "react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import ProtectedRoute from "@/components/ProtectedRoute";
+import ResidentWelfareView from "@/components/ResidentWelfareView";
+import { useAuth } from "@/context/AuthContext";
+import { db } from "@/lib/firebase";
+import {
+  collection,
+  query,
+  where,
+  onSnapshot,
+  doc,
+  getDoc,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+import {
+  Resident,
+  Medicine,
+  DoseLog,
+  CareAlert,
+  HealthUpdate,
+  FamilyRequest,
+  OrganizationInfo,
+} from "@/app/admin/types";
+import { formatTelHref } from "@/lib/utils";
+
+function parseTimeToMinutes(timeStr: string): number {
+  if (!timeStr || !timeStr.includes(":")) return 0;
+  const [h, m] = timeStr.split(":").map(Number);
+  return (h || 0) * 60 + (m || 0);
+}
+
+function convert24to12(timeStr: string): string {
+  if (!timeStr || !timeStr.includes(":")) return timeStr;
+  const [h, m] = timeStr.split(":").map(Number);
+  const period = (h || 0) >= 12 ? "PM" : "AM";
+  const displayH = (h || 0) % 12 === 0 ? 12 : (h || 0) % 12;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${pad(displayH)}:${pad(m || 0)} ${period}`;
+}
+
+function formatDateTime(ts: unknown): string {
+  if (!ts) return "Today";
+  try {
+    let d: Date;
+    if (typeof ts === "object" && ts !== null && "toDate" in ts) {
+      d = (ts as { toDate: () => Date }).toDate();
+    } else if (ts instanceof Date) {
+      d = ts;
+    } else if (typeof ts === "number") {
+      d = new Date(ts);
+    } else {
+      return String(ts);
+    }
+    const dateStr = d.toLocaleDateString("en-US", { day: "numeric", month: "short", year: "numeric" });
+    const timeStr = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true });
+    return `${dateStr}, ${timeStr}`;
+  } catch {
+    return "Today";
+  }
+}
+
+export default function FamilyPage() {
+  const { user, profile } = useAuth();
+
+  // Data states
+  const [allResidents, setAllResidents] = useState<Resident[]>([]);
+  const [medicines, setMedicines] = useState<Medicine[]>([]);
+  const [doseLogs, setDoseLogs] = useState<DoseLog[]>([]);
+  const [alerts, setAlerts] = useState<CareAlert[]>([]);
+  const [healthUpdates, setHealthUpdates] = useState<HealthUpdate[]>([]);
+  const [myRequests, setMyRequests] = useState<FamilyRequest[]>([]);
+  const [orgInfo, setOrgInfo] = useState<OrganizationInfo | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  // Selected resident (if linked to multiple)
+  const [selectedResidentId, setSelectedResidentId] = useState<string>("");
+
+  // Sub-navigation view tab: Daily Care & Telemetry vs Pensions & Welfare Schemes
+  const [familyViewTab, setFamilyViewTab] = useState<"care" | "welfare">("care");
+
+  // Request form state (Approval required, no instant link)
+  const [inviteCodeInput, setInviteCodeInput] = useState("");
+  const [relationshipInput, setRelationshipInput] = useState("Daughter");
+  const [nameInput, setNameInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
+  const [inviteError, setInviteError] = useState<string | null>(null);
+  const [submittingRequest, setSubmittingRequest] = useState(false);
+  const [requestSentNotice, setRequestSentNotice] = useState<string | null>(null);
+
+  // Family note input
+  const [familyNoteInput, setFamilyNoteInput] = useState("");
+  const [sendingNote, setSendingNote] = useState(false);
+
+  // In-app alert toast: stays visible for at least 8.5 seconds, with close button
+  const [alertToast, setAlertToast] = useState<string | null>(null);
+  const initialAlertsLoaded = useRef(false);
+  const knownAlertIds = useRef<Set<string>>(new Set());
+
+  const showToast = (msg: string) => {
+    setAlertToast(msg);
+    setTimeout(() => setAlertToast(null), 8500);
+  };
+
+  // Pre-populate family member name and phone
+  useEffect(() => {
+    if (user) {
+      setNameInput(profile?.name || user.displayName || "Priya Deshmukh");
+      setPhoneInput(profile?.phone || (user.email === "priya@saathi.demo" ? "+91 90000 00002 (demo)" : ""));
+      if (user.email === "priya@saathi.demo" && !inviteCodeInput) {
+        setInviteCodeInput("KAMLA204");
+      }
+    }
+  }, [user, profile]);
+
+  // Current day and minutes updated in useEffect to avoid SSR / prerender mismatch
+  const [todayStr, setTodayStr] = useState("");
+  const [currentMinutes, setCurrentMinutes] = useState(0);
+
+  useEffect(() => {
+    const updateTime = () => {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      setTodayStr(`${y}-${m}-${day}`);
+      setCurrentMinutes(d.getHours() * 60 + d.getMinutes());
+    };
+    updateTime();
+    const timer = setInterval(updateTime, 10000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // 1. Real-time Listeners for Residents & Requests
+  useEffect(() => {
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+
+    // Residents: Query ONLY residents where this user is linked (satisfies rules)
+    const qResidents = query(
+      collection(db, "residents"),
+      where("familyUserIds", "array-contains", user.uid)
+    );
+    const unsubResidents = onSnapshot(qResidents, (snap) => {
+      const list: Resident[] = [];
+      snap.forEach((d) => {
+        const data = d.data();
+        list.push({
+          id: d.id,
+          name: data.name || "",
+          age: data.age || 0,
+          room: data.room || "",
+          orgId: data.orgId || "",
+          bloodGroup: data.bloodGroup || "O+",
+          conditions: data.conditions || "",
+          allergies: data.allergies || "",
+          status: data.status || "stable",
+          attentionReason: data.attentionReason || "",
+          familyUserIds: data.familyUserIds || [],
+          inviteCode: data.inviteCode || "",
+          createdAt: data.createdAt,
+        });
+      });
+      setAllResidents(list);
+      setLoading(false);
+    });
+
+    // My Family Requests (filtered by userId to satisfy rules)
+    const qReq = query(
+      collection(db, "familyRequests"),
+      where("userId", "==", user.uid)
+    );
+    const unsubRequests = onSnapshot(qReq, (snap) => {
+      const reqList: FamilyRequest[] = [];
+      snap.forEach((d) => {
+        const data = d.data();
+        reqList.push({
+          id: d.id,
+          residentId: data.residentId || "",
+          orgId: data.orgId || "",
+          userId: data.userId || "",
+          name: data.name || "",
+          phone: data.phone || "",
+          relationship: data.relationship || "Family",
+          status: data.status || "pending",
+          createdAt: data.createdAt,
+        });
+      });
+      setMyRequests(reqList);
+    });
+
+    return () => {
+      unsubResidents();
+      unsubRequests();
+    };
+  }, [user]);
+
+  // Linked residents for this logged-in family user
+  const linkedResidents = useMemo(() => {
+    if (!user) return [];
+    return allResidents.filter((r) => r.familyUserIds?.includes(user.uid));
+  }, [allResidents, user]);
+
+  // Selected Active Resident
+  const activeResident = useMemo(() => {
+    if (linkedResidents.length === 0) return null;
+    if (selectedResidentId) {
+      const found = linkedResidents.find((r) => r.id === selectedResidentId);
+      if (found) return found;
+    }
+    return linkedResidents[0];
+  }, [linkedResidents, selectedResidentId]);
+
+  // Organization doc listener: scopes to activeResident's organization
+  useEffect(() => {
+    if (!activeResident?.orgId) {
+      setOrgInfo(null);
+      return;
+    }
+
+    const unsubOrg = onSnapshot(
+      doc(db, "organizations", activeResident.orgId),
+      (snap) => {
+        if (snap.exists()) {
+          const d = snap.data();
+          setOrgInfo({
+            id: snap.id,
+            name: d.name || "Sukoon Home",
+            phone: d.phone ? d.phone : undefined,
+            address: d.address || "Model Colony, Pune Circle",
+          });
+        } else {
+          setOrgInfo(null);
+        }
+      },
+      (err) => {
+        console.error("Error fetching organization:", err);
+        setOrgInfo(null);
+      }
+    );
+
+    return () => unsubOrg();
+  }, [activeResident?.orgId]);
+
+  // Listeners for active resident telemetry (medicines, logs, alerts, health updates)
+  useEffect(() => {
+    if (!activeResident?.id) {
+      setMedicines([]);
+      setDoseLogs([]);
+      setAlerts([]);
+      setHealthUpdates([]);
+      return;
+    }
+
+    const currentResidentId = activeResident.id;
+
+    // Medicines: Scoped to activeResident.id (passes isLinkedFamilyForResident rule)
+    const qMeds = query(
+      collection(db, "medicines"),
+      where("residentId", "==", currentResidentId)
+    );
+    const unsubMeds = onSnapshot(qMeds, (snap) => {
+      const list: Medicine[] = [];
+      snap.forEach((d) => {
+        const data = d.data();
+        list.push({
+          id: d.id,
+          residentId: data.residentId || "",
+          orgId: data.orgId || activeResident.orgId || "",
+          name: data.name || "",
+          dose: data.dose || "",
+          time: data.time || "09:00",
+          instructions: data.instructions || "",
+        });
+      });
+      setMedicines(list);
+    });
+
+    // Dose Logs: Scoped to activeResident.id
+    const qLogs = query(
+      collection(db, "doseLogs"),
+      where("residentId", "==", currentResidentId)
+    );
+    const unsubLogs = onSnapshot(qLogs, (snap) => {
+      const list: DoseLog[] = [];
+      snap.forEach((d) => {
+        const data = d.data();
+        list.push({
+          id: d.id,
+          medicineId: data.medicineId || "",
+          residentId: data.residentId || "",
+          orgId: data.orgId || activeResident.orgId || "",
+          date: data.date || "",
+          status: "given",
+          givenAt: data.givenAt,
+          givenBy: data.givenBy || "",
+        });
+      });
+      setDoseLogs(list);
+    });
+
+    // Alerts: Scoped to activeResident.id
+    const qAlerts = query(
+      collection(db, "alerts"),
+      where("residentId", "==", currentResidentId)
+    );
+    const unsubAlerts = onSnapshot(qAlerts, (snap) => {
+      const list: CareAlert[] = [];
+      const currentIds = new Set<string>();
+
+      snap.forEach((d) => {
+        const data = d.data();
+        const alertObj: CareAlert = {
+          id: d.id,
+          residentId: data.residentId || "",
+          orgId: data.orgId || activeResident.orgId || "",
+          type: data.type || "missed_dose",
+          medicineId: data.medicineId,
+          status: data.status || "open",
+          message: data.message || "",
+          createdBy: data.createdBy,
+          acceptedBy: data.acceptedBy,
+          declinedBy: data.declinedBy || [],
+          escalateAt: data.escalateAt,
+          timeline: data.timeline || [],
+          createdAt: data.createdAt,
+        };
+        list.push(alertObj);
+        currentIds.add(d.id);
+
+        // Show toast with at least 8.5s duration when a new alert arrives while page is open
+        if (initialAlertsLoaded.current && !knownAlertIds.current.has(d.id)) {
+          showToast(`⚠️ New Care Notice: ${alertObj.message || "New care event flagged for senior."}`);
+        }
+      });
+
+      knownAlertIds.current = currentIds;
+      initialAlertsLoaded.current = true;
+      setAlerts(list);
+    });
+
+    // Health Updates: Scoped to activeResident.id
+    const qHealth = query(
+      collection(db, "healthUpdates"),
+      where("residentId", "==", currentResidentId)
+    );
+    const unsubHealth = onSnapshot(qHealth, (snap) => {
+      const list: HealthUpdate[] = [];
+      snap.forEach((d) => {
+        const data = d.data();
+        list.push({
+          id: d.id,
+          residentId: data.residentId || "",
+          orgId: data.orgId || activeResident.orgId || "",
+          bp: data.bp || "",
+          pulse: data.pulse || "",
+          mood: data.mood || "Calm",
+          note: data.note || "",
+          byName: data.byName || "Staff Nurse",
+          createdAt: data.createdAt,
+        });
+      });
+      setHealthUpdates(list);
+    });
+
+    return () => {
+      unsubMeds();
+      unsubLogs();
+      unsubAlerts();
+      unsubHealth();
+    };
+  }, [activeResident?.id, activeResident?.orgId]);
+
+  // Active pending request for this user (if not linked yet)
+  const pendingRequest = useMemo(() => {
+    return myRequests.find((r) => r.status === "pending");
+  }, [myRequests]);
+
+  const pendingResident = useMemo(() => {
+    if (!pendingRequest) return null;
+    return allResidents.find((r) => r.id === pendingRequest.residentId);
+  }, [pendingRequest, allResidents]);
+
+  // Active SOS alert for linked resident (if any)
+  const activeSosAlert = useMemo(() => {
+    if (!activeResident) return null;
+    return alerts.find(
+      (a) => a.residentId === activeResident.id && a.type === "sos" && a.status !== "resolved"
+    );
+  }, [activeResident, alerts]);
+
+  // Client timer to re-evaluate 60s escalation window in real time without extra Firestore writes
+  const [clientNow, setClientNow] = useState(0);
+  useEffect(() => {
+    setClientNow(Date.now());
+    const timer = setInterval(() => setClientNow(Date.now()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const isSosOverdueOrEscalated = useMemo(() => {
+    if (!activeSosAlert) return false;
+    if (activeSosAlert.status === "escalated") return true;
+    if (activeSosAlert.status === "open" && clientNow > 0) {
+      let createdMs = 0;
+      if (activeSosAlert.createdAt && typeof (activeSosAlert.createdAt as any).toMillis === "function") {
+        createdMs = (activeSosAlert.createdAt as any).toMillis();
+      } else if (activeSosAlert.createdAt && typeof (activeSosAlert.createdAt as any).seconds === "number") {
+        createdMs = (activeSosAlert.createdAt as any).seconds * 1000;
+      } else if (activeSosAlert.createdAt) {
+        const parsed = new Date(activeSosAlert.createdAt as any).getTime();
+        if (!isNaN(parsed)) createdMs = parsed;
+      } else if (activeSosAlert.escalateAt) {
+        createdMs = activeSosAlert.escalateAt - 60000;
+      }
+      return createdMs > 0 && clientNow - createdMs >= 60000;
+    }
+    return false;
+  }, [activeSosAlert, clientNow]);
+
+  // Today's Medicines for linked resident
+  const residentMedicines = useMemo(() => {
+    if (!activeResident) return [];
+    return medicines
+      .filter((m) => m.residentId === activeResident.id)
+      .map((med) => {
+        const medMins = parseTimeToMinutes(med.time);
+        const givenLog = doseLogs.find(
+          (log) => log.medicineId === med.id && log.date === todayStr && log.status === "given"
+        );
+        const isOverdue = !givenLog && currentMinutes > medMins + 15;
+        const overdueMinutes = isOverdue ? currentMinutes - medMins : 0;
+
+        return {
+          med,
+          medMins,
+          givenLog,
+          isOverdue,
+          overdueMinutes,
+        };
+      })
+      .sort((a, b) => a.medMins - b.medMins);
+  }, [activeResident, medicines, doseLogs, todayStr, currentMinutes]);
+
+  // Alerts for linked resident (last 7 days)
+  const residentAlerts = useMemo(() => {
+    if (!activeResident) return [];
+    return alerts.filter((a) => a.residentId === activeResident.id);
+  }, [activeResident, alerts]);
+
+  // Health updates for linked resident
+  const residentHealthUpdates = useMemo(() => {
+    if (!activeResident) return [];
+    return healthUpdates.filter((h) => h.residentId === activeResident.id);
+  }, [activeResident, healthUpdates]);
+
+  // ACTION: Submit link request (Requires Admin Approval via inviteCodes collection)
+  const handleRequestLink = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!user) return;
+    const cleanCode = inviteCodeInput.trim().toUpperCase();
+    if (!cleanCode) {
+      setInviteError("Please enter an 8-character invite code.");
+      return;
+    }
+
+    setSubmittingRequest(true);
+    setInviteError(null);
+
+    try {
+      // Look up invite code directly (satisfies firestore rules for signed-in users)
+      const codeRef = doc(db, "inviteCodes", cleanCode);
+      const codeSnap = await getDoc(codeRef);
+
+      if (!codeSnap.exists()) {
+        setInviteError("Invite code not found. Please verify with care administration.");
+        setSubmittingRequest(false);
+        return;
+      }
+
+      const codeData = codeSnap.data();
+      const targetResidentId = codeData.residentId;
+      const targetOrgId = codeData.orgId || "";
+
+      // Check if already linked
+      if (allResidents.some((r) => r.id === targetResidentId)) {
+        setInviteError("You are already linked to this senior's care circle.");
+        setSubmittingRequest(false);
+        return;
+      }
+
+      // Check if request already pending
+      if (myRequests.some((r) => r.residentId === targetResidentId && r.status === "pending")) {
+        setInviteError("An access request for this resident is already awaiting approval.");
+        setSubmittingRequest(false);
+        return;
+      }
+
+      // Create a pending request in familyRequests (approval required)
+      await addDoc(collection(db, "familyRequests"), {
+        residentId: targetResidentId,
+        orgId: targetOrgId,
+        userId: user.uid,
+        name: nameInput.trim() || profile?.name || "Family Member",
+        phone: phoneInput.trim() || profile?.phone || "+91 90000 00002 (demo)",
+        relationship: relationshipInput,
+        status: "pending",
+        createdAt: serverTimestamp(),
+      });
+
+      setInviteCodeInput("");
+      setRequestSentNotice(
+        "Request sent – waiting for care administration to approve access."
+      );
+      showToast("Request submitted. Care administration notified for approval.");
+    } catch (err) {
+      console.error("Error creating family request:", err);
+      setInviteError("Failed to submit request. Please try again.");
+    } finally {
+      setSubmittingRequest(false);
+    }
+  };
+
+
+
+  return (
+    <ProtectedRoute allowedRole="family">
+      <div className="min-h-screen bg-[#FAF7F2] text-[#1C2826] flex flex-col font-sans">
+        {/* Shared Header */}
+        <Header />
+
+        {/* Floating In-App Toast (Visible for at least 8.5 seconds, with close button) */}
+        {alertToast && (
+          <div className="fixed bottom-6 right-6 z-50 max-w-md bg-[#0F5F5C] text-white px-5 py-4 rounded-xl shadow-xl border border-[#0B4644] flex items-center gap-3 animate-fade-in">
+            <span className="material-symbols-outlined text-[24px] text-[#A7F3D0] shrink-0">
+              notifications_active
             </span>
-</div>
-<!-- Medication Item Cards -->
-<div class="flex flex-col gap-space-sm">
-<!-- Card 1: Given (Amlodipine 5mg - 9:20 AM) -->
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-12 rounded-xl bg-[#E8F3EE] border border-[#BDE0D1] text-primary flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">medication</span>
-</div>
-<div>
-<div class="flex items-center gap-2">
-<span class="font-label-sm text-label-sm text-on-surface font-bold">Morning (9:20 AM)</span>
-<span class="w-1.5 h-1.5 rounded-full bg-[#D5CEBF]"></span>
-<span class="font-label-sm text-label-sm text-primary">Blood Pressure</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Amlodipine 5mg</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Post-breakfast routine</p>
-</div>
-</div>
-<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto pt-2 sm:pt-0">
-<div class="inline-flex items-center gap-1 px-3 py-1 bg-[#E8F3EE] text-primary border border-[#BDE0D1] rounded-full font-label-md text-label-md font-bold shadow-sm">
-<span class="material-symbols-outlined text-[18px]">check_circle</span>
-<span>Given (9:20 AM)</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Confirmed by Nurse Anjali</span>
-</div>
-</div>
-<!-- Card 2: Pending (Calcium D3) -->
-<div class="p-space-md bg-[#FFFFFF] border border-[#E8E2D8] rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-12 rounded-xl bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">pill</span>
-</div>
-<div>
-<div class="flex items-center gap-2">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">1:00 PM (Afternoon)</span>
-<span class="w-1.5 h-1.5 rounded-full bg-[#D5CEBF]"></span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Bone Health</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Calcium D3</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Prescribed dietary supplement • Post-lunch</p>
-</div>
-</div>
-<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto pt-2 sm:pt-0">
-<div class="inline-flex items-center gap-1 px-3 py-1 bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant rounded-full font-label-md text-label-md">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-<span>Pending</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Scheduled post-lunch</span>
-</div>
-</div>
-<!-- Card 3: Pending (Metformin) -->
-<div class="p-space-md bg-[#FFFFFF] border border-[#E8E2D8] rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
-<div class="flex items-center gap-space-md">
-<div class="w-12 h-12 rounded-xl bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">medication_liquid</span>
-</div>
-<div>
-<div class="flex items-center gap-2">
-<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">8:00 PM (Evening)</span>
-<span class="w-1.5 h-1.5 rounded-full bg-[#D5CEBF]"></span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Metabolic Support</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Metformin</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Blood sugar regulation • With evening meal</p>
-</div>
-</div>
-<div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto pt-2 sm:pt-0">
-<div class="inline-flex items-center gap-1 px-3 py-1 bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant rounded-full font-label-md text-label-md">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-<span>Pending</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Scheduled with dinner</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Vital Statistics Sparkline & Reassurance Metric -->
-<div class="bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md md:p-space-lg flex flex-col gap-space-md">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Clinical Baseline</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Recent Vitals Trend</h2>
-</div>
-<span class="px-space-sm py-1 bg-[#E8F3EE] border border-[#BDE0D1] text-primary font-label-sm text-label-sm rounded-full self-start font-bold">
-              Stable Condition
-            </span>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Blood Pressure</span>
-<p class="font-headline-md text-headline-md text-on-surface">128 / 82</p>
-<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">check</span> Stable reading [demo]
-</span>
-</div>
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Pulse Rate</span>
-<p class="font-headline-md text-headline-md text-on-surface">74 <span class="font-body-md text-body-md font-normal text-on-surface-variant">bpm</span></p>
-<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">check</span> Steady [demo]
-</span>
-</div>
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant">SpO2 Oxygen</span>
-<p class="font-headline-md text-headline-md text-on-surface">98 <span class="font-body-md text-body-md font-normal text-on-surface-variant">%</span></p>
-<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]">check</span> Normal [demo]
-</span>
-</div>
-</div>
-<!-- Trend curve card -->
-<div class="w-full bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl p-space-md flex flex-col gap-2">
-<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span>Weekly Systolic BP Trend [demo]</span>
-<span>Observation Range</span>
-</div>
-<div class="w-full h-16 flex items-center justify-center">
-<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 500 50">
-<line class="text-[#D5CEBF]" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="25" y2="25"></line>
-<polyline class="text-primary" fill="none" points="20,32 90,26 170,28 250,22 330,24 410,21 480,24" stroke="currentColor" stroke-width="3"></polyline>
-<circle class="text-primary" cx="20" cy="32" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="90" cy="26" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="170" cy="28" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="250" cy="22" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="330" cy="24" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="410" cy="21" fill="currentColor" r="4"></circle>
-<circle class="text-primary" cx="480" cy="24" fill="currentColor" r="5"></circle>
-</svg>
-</div>
-<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm">
-<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span class="font-bold text-primary">Today (128/82)</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Right Column: Staff Updates Feed & Activities (5 cols) -->
-<div class="lg:col-span-5 flex flex-col gap-space-lg">
-<!-- Staff Health-Update Timeline (Feed) -->
-<div class="bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md md:p-space-lg flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Direct Observation</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Staff Care Timeline</h2>
-</div>
-<span class="w-8 h-8 rounded-full bg-[#F3EEE6] border border-[#E8E2D8] flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[18px]">notes</span>
-</span>
-</div>
-<!-- Chronological List with Vertical Connector -->
-<div class="relative flex flex-col gap-space-lg pl-6 before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-[#E8E2D8]">
-<!-- Update 1: BP reading 128/82 -->
-<div class="relative flex flex-col gap-1">
-<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-[#FFFFFF]"></span>
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
-<span class="font-bold text-primary">10:15 AM Today</span>
-<span>•</span>
-<span>Routine Round</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface mt-1">
-                "Vitals Check: BP 128/82 mmHg, Pulse 74 bpm. Normal and stable."
-              </p>
-<div class="flex items-center gap-2 mt-1">
-<span class="w-6 h-6 rounded-full bg-[#E8F3EE] text-primary flex items-center justify-center font-label-sm text-[12px] font-bold">A</span>
-<span class="font-label-sm text-label-sm text-primary font-bold">Nurse Anjali</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Floor Nurse</span>
-</div>
-</div>
-<!-- Update 2: Morning walk with Suresh K. -->
-<div class="relative flex flex-col gap-1">
-<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-secondary ring-4 ring-[#FFFFFF]"></span>
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
-<span class="font-bold text-secondary">09:30 AM Today</span>
-<span>•</span>
-<span>Mobility &amp; Garden</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface mt-1">
-                "Morning walk in garden with Suresh K. Kamla Deshmukh was in cheerful spirits, enjoyed warm ginger tea and relaxed in the veranda."
-              </p>
-<div class="mt-2 w-full rounded-xl overflow-hidden border border-[#E8E2D8] relative">
-<img class="w-full h-36 object-cover bg-[#F3EEE6]" data-alt="Serene senior care courtyard garden in Pune India, with blooming marigolds, paved gentle walking pathways, seated elder drinking morning tea under shady banyan tree with warm sunbeams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAepk63dB-4Sma5A-Hg99MqcfcjTLBqTltpatmUqjNXm-vZQ73s5k05d2_colKihVgLy5IwfzrbGHn88Evj1l1befTVSW9WGGeb93s73r4OqOFbCb-qE0H9sDbV_p3pbvB51IXkE7GagvWnsrb7o_C0GFyabu_tkUg02krAFnTvt-QjWIEIrXaVCKe20VafzboKJHE3innqxyxO7PW349FFZZ7lRq0etxYDD5XNvSBA1MWeyrqms12qjw"/>
-<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-[#FFFFFF]/90 border border-[#E8E2D8] font-label-sm text-label-sm text-on-surface backdrop-blur-sm">Sukoon Courtyard Walkway</span>
-</div>
-<div class="flex items-center gap-2 mt-2">
-<span class="w-6 h-6 rounded-full bg-[#E8F3EE] text-primary flex items-center justify-center font-label-sm text-[12px] font-bold">S</span>
-<span class="font-label-sm text-label-sm text-primary font-bold">Suresh K.</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Care Team Companion</span>
-</div>
-</div>
-<!-- Update 3: Staff notes -->
-<div class="relative flex flex-col gap-1">
-<span class="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-[#A89F91] ring-4 ring-[#FFFFFF]"></span>
-<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
-<span>Yesterday Evening</span>
-<span>•</span>
-<span>Staff notes</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface mt-1">
-                "Staff notes: Kamla Deshmukh participated in evening recreation, ate scheduled dinner comfortably, and rested peacefully."
-              </p>
-<div class="flex items-center gap-2 mt-1">
-<span class="w-6 h-6 rounded-full bg-[#F3EEE6] border border-[#E8E2D8] text-on-surface-variant flex items-center justify-center font-label-sm text-[12px] font-bold">R</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">Ramesh Patil</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Evening Staff</span>
-</div>
-</div>
-</div>
-<!-- Note input -->
-<div class="mt-space-sm p-space-sm bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col gap-space-xs">
-<label class="font-label-sm text-label-sm text-on-surface-variant font-bold" for="family-note-input">Send Note to Room 204 Care Team</label>
-<div class="flex gap-2">
-<input class="w-full h-[48px] px-space-sm rounded-xl bg-[#FFFFFF] border border-[#E8E2D8] text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary" id="family-note-input" placeholder="e.g. Visiting this afternoon..." type="text"/>
-<button class="h-[48px] px-space-md bg-primary hover:bg-[#003634] text-on-primary rounded-xl font-label-md text-label-md shrink-0 flex items-center justify-center gap-1 shadow-sm" onclick="alert('Message noted for Nurse Anjali.')" type="button">
-<span class="material-symbols-outlined text-[18px]">send</span>
-<span class="hidden sm:inline">Send</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Meal & Rest Summary Card -->
-<div class="bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md flex flex-col gap-space-sm">
-<div class="flex items-center justify-between">
-<span class="font-headline-sm text-headline-sm text-on-surface">Weekly Meal &amp; Rest Report</span>
-<span class="material-symbols-outlined text-primary text-[24px]">restaurant</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">Daily dietary intake and rest monitored by campus staff.</p>
-<div class="grid grid-cols-2 gap-space-sm mt-1">
-<div class="p-space-sm bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Hydration</span>
-<p class="font-headline-sm text-headline-sm text-primary">Adequate [demo]</p>
-<span class="font-label-sm text-label-sm text-primary font-bold">On Schedule</span>
-</div>
-<div class="p-space-sm bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Sleep Rest</span>
-<p class="font-headline-sm text-headline-sm text-primary">Restful [demo]</p>
-<span class="font-label-sm text-label-sm text-primary font-bold">Uninterrupted</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Bottom Details Section: Caregivers on Duty & Emergency Tie-Up -->
-<section class="w-full bg-[#FFFFFF] rounded-xl border border-[#E8E2D8] shadow-sm p-space-md md:p-space-lg flex flex-col gap-space-lg" id="caregivers-section">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Staff Care Team</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">Caregivers On Duty &amp; Emergency Tie-Up</h2>
-</div>
-<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
-<span class="w-3 h-3 rounded-full bg-primary"></span>
-<span>Active Shift (08:00 - 20:00)</span>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-<!-- Staff Member 1: Nurse Anjali -->
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col justify-between gap-space-md">
-<div class="flex items-start gap-space-sm">
-<img class="w-16 h-16 rounded-xl object-cover shrink-0 bg-[#FFFFFF] border border-[#E8E2D8]" data-alt="Portrait of Nurse Anjali, compassionate Indian registered nurse in modern clean teal scrubs, holding medical clipboard, smiling warmly against a brightly lit senior care hallway." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcJKtXw8cAq8fNijaZRnnf_CuF_OTiK3uTzZzB4bSZgCUGB5ogELeudN-iDvV5v-LGhoCqc2Pc_GVRN2IHnXD2wyIgMKHFj9NtsaychiwLf6rKgj7QjPhXL-4wfJA0gem3EuOGLlTZ7R_ckkdaltFpP4YXHQsr2Mi6h2Xi5-WxbOV7gOcoMCt5EhA5s5pgejnmAP3jMFfT4YKSqb2EEU0_3QgHDHuCTqSw6ZcLp8xwgSJZAzCdiuvkrA"/>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-primary font-bold">Floor Nurse On Duty</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Nurse Anjali</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Floor In-charge</p>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<div class="text-on-surface-variant font-body-md text-body-md flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">badge</span>
-<span>Direct Extension: Room 204 Terminal</span>
-</div>
-<div class="h-[46px] w-full px-space-md bg-[#FFFFFF] border border-[#E8E2D8] text-primary font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">support_agent</span>
-<span>Nurse Anjali on Floor</span>
-</div>
-</div>
-</div>
-<!-- Staff Member 2: Care Supervisor Rajiv Sharma -->
-<div class="p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col justify-between gap-space-md">
-<div class="flex items-start gap-space-sm">
-<img class="w-16 h-16 rounded-xl object-cover shrink-0 bg-[#FFFFFF] border border-[#E8E2D8]" data-alt="Portrait of Care Supervisor Rajiv Sharma, professional Indian man in mid-40s wearing smart casual khakis and teal badge, smiling reassuringly in comfortable elder community office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgWNzi_L4_ZYmUPSgISAY_crVK6miw2L5hOMBhjOccKTQXfqWBReFExZHftDgaIt_BA0G9N7yREnWbPFdQESiBbtyJq135fXka92hCNYw66vgvAbmw63F6gMzpYImgqEgVwbr_1i2OrbtLiIWcazwxVwyfCTO_lHtLy8JbCnTHvpqzKMaSCc-dxo5CianZCRDnEAkujvbLCgj1of-ZS4b7pr926SyysKbfS5HzxrX0Vf0MzlCVtOvUiQ"/>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-primary font-bold">Campus Care Supervisor</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Supervisor Rajiv Sharma</h3>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Sukoon Campus Resident Welfare</p>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<div class="text-on-surface-variant font-body-md text-body-md flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
-<span>Campus Duty: Day Shift</span>
-</div>
-<div class="h-[46px] w-full px-space-md bg-[#FFFFFF] border border-[#E8E2D8] text-primary font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">person</span>
-<span>Supervisor Rajiv Sharma</span>
-</div>
-</div>
-</div>
-<!-- Emergency Hospital Card: [Nearest hospital] -->
-<div class="p-space-md bg-[#FFF5F5] border border-[#F8D2D2] text-[#93000A] rounded-xl flex flex-col justify-between gap-space-md">
-<div class="flex items-start gap-space-sm">
-<div class="w-14 h-14 rounded-xl bg-[#BA1A1A] text-white flex items-center justify-center shrink-0 shadow-sm">
-<span class="material-symbols-outlined text-[28px]">local_hospital</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-[#BA1A1A] font-bold uppercase tracking-wider">Emergency Hospital Tie-Up</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">[Nearest hospital]</h3>
-<p class="font-label-sm text-label-sm text-[#733030]">Designated hospital network for Room 204</p>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<div class="text-[#733030] font-label-sm text-label-sm flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">health_and_safety</span>
-<span>Medical dossier and records on campus file</span>
-</div>
-<div class="h-[46px] w-full px-space-md bg-[#BA1A1A] text-white font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 shadow-sm">
-<span class="material-symbols-outlined text-[20px]">medical_services</span>
-<span>[Nearest hospital] Emergency Protocol</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Care Records Export Card -->
-<div class="w-full p-space-md bg-[#F3EEE6] border border-[#E8E2D8] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
-<div class="flex items-center gap-space-sm">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
-<span class="material-symbols-outlined text-[22px]">description</span>
-</div>
-<div>
-<p class="font-label-md text-label-md text-on-surface font-bold">Care Summary Record</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant">Medication history and caregiver notes available for family access (Priya Deshmukh).</p>
-</div>
-</div>
-<button class="h-[46px] px-space-md bg-[#FFFFFF] border border-[#E8E2D8] hover:bg-[#FAF7F2] text-primary rounded-xl font-label-md text-label-md shrink-0 flex items-center justify-center gap-2 shadow-sm" onclick="alert('Downloading health summary for Kamla Deshmukh [demo].')" type="button">
-<span class="material-symbols-outlined text-[20px]">download</span>
-<span>Download Health Summary [demo]</span>
-</button>
-</div>
-</section>
-</div>
-</div></main><footer class="w-full bg-[#F3EEE6] border-t border-[#E8E2D8] mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin md:px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left"><div class="w-12 h-12 rounded-full bg-[#FFEAE6] text-[#BA1A1A] border border-[#F8C8C0] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[28px]">emergency</span></div><div><p class="font-label-lg text-label-lg text-on-surface font-bold">Elderline 14567 (Govt. of India)</p><p class="font-label-sm text-label-sm text-on-surface-variant">National helpline for senior citizens</p></div></div><div class="flex flex-col sm:flex-row items-center gap-space-lg text-center sm:text-right"><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span>•</span><a class="hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Mandate</a><span>•</span><a class="hover:text-primary transition-colors" data-path="terms-of-care" href="#">Terms of Care</a></div><p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Saathi Senior Community Care India. All rights reserved.</p></div></div></footer>` }} />;
+            <p className="text-sm font-semibold flex-1 leading-snug">{alertToast}</p>
+            <button
+              onClick={() => setAlertToast(null)}
+              className="p-1 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors shrink-0"
+              type="button"
+              title="Close notification"
+            >
+              <span className="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+        )}
+
+        <main className="w-full pt-28 pb-16 bg-[#FAF7F2] flex-grow">
+          <div className="max-w-[1280px] w-full mx-auto px-6 lg:px-12 flex flex-col gap-8">
+            {/* VIEW 1: NO LINKED RESIDENT */}
+            {!loading && linkedResidents.length === 0 && (
+              familyViewTab === "welfare" ? (
+                <ResidentWelfareView
+                  resident={null}
+                  orgName={orgInfo?.name || "Sukoon Home"}
+                  context="family"
+                  onBack={() => setFamilyViewTab("care")}
+                />
+              ) : (
+                <div className="max-w-lg w-full mx-auto my-8 bg-white rounded-2xl border border-[#E8E2D8] shadow-sm p-8 md:p-10 flex flex-col items-center text-center gap-6">
+                  <div className="w-16 h-16 rounded-2xl bg-[#E8F3EE] text-[#0F5F5C] flex items-center justify-center border border-[#BDE0D1]">
+                    <span className="material-symbols-outlined text-[36px]">family_restroom</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h1 className="text-2xl font-black text-[#1C2826] tracking-tight">
+                      Join your parent&apos;s care circle
+                    </h1>
+                    <p className="text-sm text-[#5A6563] leading-relaxed">
+                      For patient safety and medical privacy, entering an invite code requires care administration approval before vital telemetry is unlocked.
+                    </p>
+                  </div>
+
+                  {/* Status Notice if request is pending */}
+                  {(pendingRequest || requestSentNotice) && (
+                    <div className="w-full bg-amber-50 border border-amber-300 rounded-xl p-4 text-left flex items-start gap-3">
+                      <span className="material-symbols-outlined text-amber-700 text-[22px] shrink-0 mt-0.5">
+                        hourglass_top
+                      </span>
+                      <div className="flex flex-col gap-0.5">
+                        <span className="text-xs font-bold text-amber-900 uppercase tracking-wider">
+                          Pending Administration Approval
+                        </span>
+                        <p className="text-xs text-amber-800">
+                          {requestSentNotice ||
+                            `Request sent for ${pendingResident?.name || "resident"} (${pendingRequest?.relationship}) – waiting for care administration to approve.`}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Request Form */}
+                  <form onSubmit={handleRequestLink} className="w-full flex flex-col gap-4 text-left text-xs">
+                    <div className="flex flex-col gap-1.5">
+                      <label className="font-bold text-[#1C2826] uppercase tracking-wider">
+                        8-Character Invite Code *
+                      </label>
+                      <input
+                        type="text"
+                        maxLength={10}
+                        value={inviteCodeInput}
+                        onChange={(e) => {
+                          setInviteCodeInput(e.target.value.toUpperCase());
+                          setInviteError(null);
+                        }}
+                        placeholder="e.g. 7KQ4XM2P"
+                        required
+                        className="h-12 px-4 rounded-xl border border-[#E8E2D8] text-base font-mono font-bold tracking-widest text-[#1C2826] focus:outline-none focus:border-[#0F5F5C] uppercase placeholder:font-normal placeholder:tracking-normal placeholder:text-gray-400"
+                      />
+                      {inviteError && (
+                        <p className="text-xs text-red-600 font-semibold mt-1 flex items-center gap-1">
+                          <span className="material-symbols-outlined text-[16px]">error</span>
+                          <span>{inviteError}</span>
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="flex flex-col gap-1">
+                        <label className="font-bold text-[#1C2826]">Relationship *</label>
+                        <select
+                          value={relationshipInput}
+                          onChange={(e) => setRelationshipInput(e.target.value)}
+                          className="h-11 px-3 rounded-xl border border-[#E8E2D8] text-sm font-semibold bg-white text-[#1C2826] focus:outline-none focus:border-[#0F5F5C]"
+                        >
+                          <option value="Daughter">Daughter</option>
+                          <option value="Son">Son</option>
+                          <option value="Spouse">Spouse</option>
+                          <option value="Other">Other Family</option>
+                        </select>
+                      </div>
+
+                      <div className="flex flex-col gap-1">
+                        <label className="font-bold text-[#1C2826]">Your Phone *</label>
+                        <input
+                          type="text"
+                          value={phoneInput}
+                          onChange={(e) => setPhoneInput(e.target.value)}
+                          placeholder="e.g. +91 90000 00002 (demo)"
+                          required
+                          className="h-11 px-3 rounded-xl border border-[#E8E2D8] text-sm text-[#1C2826] focus:outline-none focus:border-[#0F5F5C]"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-1">
+                      <label className="font-bold text-[#1C2826]">Your Full Name *</label>
+                      <input
+                        type="text"
+                        value={nameInput}
+                        onChange={(e) => setNameInput(e.target.value)}
+                        placeholder="e.g. Priya Deshmukh"
+                        required
+                        className="h-11 px-3 rounded-xl border border-[#E8E2D8] text-sm text-[#1C2826] focus:outline-none focus:border-[#0F5F5C]"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={submittingRequest || !inviteCodeInput.trim()}
+                      className="h-12 w-full mt-2 rounded-xl bg-[#0F5F5C] hover:bg-[#0B4644] text-white text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer disabled:opacity-50"
+                    >
+                      <span className="material-symbols-outlined text-[20px]">send</span>
+                      <span>{submittingRequest ? "Sending Request..." : "Request Access"}</span>
+                    </button>
+                  </form>
+
+                  <div className="pt-2 border-t border-[#E8E2D8] w-full flex items-center justify-center gap-2 text-xs text-[#5A6563]">
+                    <span>Need an invite code? Contact your care desk:</span>
+                    {orgInfo?.phone ? (
+                      <a href={formatTelHref(orgInfo.phone)} className="text-[#0F5F5C] font-bold hover:underline">
+                        {orgInfo.phone}
+                      </a>
+                    ) : (
+                      <span className="text-[#888] font-medium">Care desk number not available</span>
+                    )}
+                  </div>
+
+                  <div className="pt-2 border-t border-[#E8E2D8] w-full flex items-center justify-center">
+                    <button
+                      type="button"
+                      onClick={() => setFamilyViewTab("welfare")}
+                      className="text-xs font-bold text-[#0F5F5C] hover:underline flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <span className="material-symbols-outlined text-[16px]">assignment_turned_in</span>
+                      <span>Explore Resident Welfare &amp; Pension Schemes [demo]</span>
+                    </button>
+                  </div>
+                </div>
+              )
+            )}
+
+            {/* VIEW 2: LINKED RESIDENT EXISTS -> LIVE FAMILY DASHBOARD */}
+            {activeResident && (
+              <>
+                {/* 1. LARGE RED ACTIVE SOS BANNER */}
+                {activeSosAlert && (
+                  <div className="bg-red-700 text-white px-6 py-5 rounded-2xl shadow-xl border border-red-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 animate-pulse">
+                    <div className="flex items-start sm:items-center gap-4">
+                      <div className="w-13 h-13 rounded-2xl bg-white/20 border border-white/30 flex items-center justify-center shrink-0">
+                        <span className="material-symbols-outlined text-[32px] text-white">emergency</span>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <div className="flex items-center gap-2">
+                          <span className="px-2.5 py-0.5 rounded-full bg-white text-red-700 text-xs font-black uppercase">
+                            Emergency Incident Active
+                          </span>
+                          <span className="text-xs text-red-100 font-mono">
+                            SOS raised at {activeSosAlert.timeline[0]?.at || "recently"}
+                          </span>
+                        </div>
+                        <h2 className="text-lg sm:text-xl font-black text-white">
+                          SOS raised for {activeResident.name}
+                        </h2>
+                        <p className="text-xs sm:text-sm text-red-100">
+                          {isSosOverdueOrEscalated && "No volunteer responded in 60s. Care desk must call 108 now."}
+                          {!isSosOverdueOrEscalated && activeSosAlert.status === "open" && "Awaiting local volunteer dispatch in Pune Circle."}
+                          {!isSosOverdueOrEscalated && activeSosAlert.status === "accepted" && `${activeSosAlert.acceptedBy?.name} accepted – on the way.`}
+                          {!isSosOverdueOrEscalated && activeSosAlert.status === "arrived" && `${activeSosAlert.acceptedBy?.name} arrived on scene.`}
+                        </p>
+
+                        {/* Show volunteer name and phone ONLY while incident is active */}
+                        {activeSosAlert.acceptedBy && (
+                          <div className="mt-2 inline-flex items-center gap-3 bg-red-900/60 border border-red-400/40 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white w-fit">
+                            <span className="material-symbols-outlined text-[18px]">person</span>
+                            <span>Responder: {activeSosAlert.acceptedBy.name}</span>
+                            <span>•</span>
+                            <a
+                              href={formatTelHref(activeSosAlert.acceptedBy.phone || "+91 90000 00003")}
+                              className="hover:underline flex items-center gap-1"
+                            >
+                              <span className="material-symbols-outlined text-[16px]">phone</span>
+                              <span>{activeSosAlert.acceptedBy.phone || "+91 90000 00003 (demo)"}</span>
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-2 shrink-0 self-stretch md:self-auto">
+                      {isSosOverdueOrEscalated && (
+                        <a
+                          href="tel:108"
+                          className="flex-1 md:flex-initial h-11 px-4 bg-white text-red-700 font-extrabold text-xs rounded-xl hover:bg-red-50 transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                        >
+                          <span className="material-symbols-outlined text-[18px]">call</span>
+                          <span>Call 108 Ambulance</span>
+                        </a>
+                      )}
+                      {orgInfo?.phone ? (
+                        <a
+                          href={formatTelHref(orgInfo.phone)}
+                          className={`flex-1 md:flex-initial h-11 px-5 font-extrabold text-xs rounded-xl transition-colors shadow-sm flex items-center justify-center gap-1.5 ${
+                            isSosOverdueOrEscalated
+                              ? "bg-red-900/60 border border-red-400 text-white hover:bg-red-900"
+                              : "bg-white text-red-700 hover:bg-red-50"
+                          }`}
+                        >
+                          <span className="material-symbols-outlined text-[18px]">phone</span>
+                          <span>Call {orgInfo.name || "Care Desk"}</span>
+                        </a>
+                      ) : (
+                        <span
+                          className={`flex-1 md:flex-initial h-11 px-4 font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 ${
+                            isSosOverdueOrEscalated
+                              ? "bg-red-900/60 border border-red-400 text-red-200"
+                              : "bg-white/20 text-white"
+                          }`}
+                        >
+                          Care desk number not available
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Sub-Navigation Tabs: Daily Care & Telemetry vs Pensions & Welfare Schemes */}
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setFamilyViewTab("care")}
+                    className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      familyViewTab === "care"
+                        ? "bg-[#0F5F5C] text-white shadow-sm"
+                        : "bg-white text-[#5A6563] border border-[#E8E2D8] hover:bg-[#FAF7F2] hover:text-[#1C2826]"
+                    }`}
+                  >
+                    <span className="material-symbols-outlined text-[18px]">monitor_heart</span>
+                    <span>Daily Care &amp; Telemetry</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setFamilyViewTab("welfare")}
+                    className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer ${
+                      familyViewTab === "welfare"
+                        ? "bg-[#0F5F5C] text-white shadow-sm"
+                        : "bg-white text-[#5A6563] border border-[#E8E2D8] hover:bg-[#FAF7F2] hover:text-[#1C2826]"
+                    }`}
+                  >
+                    <span className="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+                    <span>Pensions &amp; Welfare Schemes</span>
+                  </button>
+                </div>
+
+                {familyViewTab === "welfare" ? (
+                  <ResidentWelfareView
+                    resident={activeResident}
+                    orgName={orgInfo?.name || "Sukoon Home"}
+                    context="family"
+                    onBack={() => setFamilyViewTab("care")}
+                  />
+                ) : (
+                  <>
+                    {/* 2. Top Resident Profile Strip & Multi-Resident Selector */}
+                    <section className="w-full bg-white rounded-2xl border border-[#E8E2D8] shadow-sm p-6 md:p-8 flex flex-col gap-6">
+                  {linkedResidents.length > 1 && (
+                    <div className="flex items-center justify-between pb-4 border-b border-[#E8E2D8]">
+                      <span className="text-xs font-bold text-[#5A6563] uppercase tracking-wider">
+                        Switch Senior Care Circle:
+                      </span>
+                      <select
+                        value={activeResident.id}
+                        onChange={(e) => setSelectedResidentId(e.target.value)}
+                        className="h-10 px-3.5 rounded-xl border border-[#E8E2D8] bg-[#FAF7F2] text-sm font-bold text-[#1C2826] focus:outline-none focus:border-[#0F5F5C]"
+                      >
+                        {linkedResidents.map((r) => (
+                          <option key={r.id} value={r.id}>
+                            {r.name} ({r.room})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                      {activeResident.photoUrl ? (
+                        <img
+                          src={activeResident.photoUrl}
+                          alt={activeResident.name}
+                          className="w-20 h-20 rounded-2xl object-cover border-2 border-[#E8E2D8] shadow-sm shrink-0"
+                        />
+                      ) : (
+                        <div className="w-20 h-20 rounded-2xl bg-[#FAF7F2] border border-[#E8E2D8] text-[#0F5F5C] flex items-center justify-center text-3xl font-black shrink-0 shadow-sm">
+                          {activeResident.name.charAt(0)}
+                        </div>
+                      )}
+
+                      <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-wrap items-center gap-3">
+                          <h1 className="text-2xl md:text-3xl font-extrabold text-[#1C2826] tracking-tight">
+                            {activeResident.name}
+                          </h1>
+
+                          {activeResident.status === "sos" ? (
+                            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-100 text-red-800 border border-red-300 text-xs font-black shadow-sm">
+                              <span className="material-symbols-outlined text-[16px] animate-pulse">emergency</span>
+                              <span>SOS Active</span>
+                            </div>
+                          ) : activeResident.status === "attention" ? (
+                            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold shadow-sm">
+                              <span className="material-symbols-outlined text-[16px]">warning</span>
+                              <span>Needs Attention</span>
+                            </div>
+                          ) : (
+                            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#E8F3EE] text-[#0F5F5C] border border-[#BDE0D1] text-xs font-bold shadow-sm">
+                              <span className="material-symbols-outlined text-[16px]">check_circle</span>
+                              <span>Stable &amp; Rested</span>
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="flex flex-wrap items-center gap-y-1 gap-x-4 text-[#5A6563] text-sm">
+                          <span className="flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[18px] text-[#0F5F5C]">apartment</span>
+                            {orgInfo?.name || "Care Facility"}, {activeResident.room}
+                          </span>
+                          <span>•</span>
+                          <span>Age {activeResident.age}</span>
+                          <span>•</span>
+                          <span>Blood Group: <strong>{activeResident.bloodGroup || "O+"}</strong></span>
+                        </div>
+
+                        <div className="flex flex-wrap items-center gap-2 mt-1">
+                          <span className="px-2.5 py-0.5 rounded bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] text-xs font-semibold">
+                            Conditions: {activeResident.conditions}
+                          </span>
+                          <span className="px-2.5 py-0.5 rounded bg-[#E8F3EE] border border-[#BDE0D1] text-[#0F5F5C] text-xs font-bold font-mono">
+                            Code: {activeResident.inviteCode}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row w-full lg:w-auto items-stretch sm:items-center gap-3 shrink-0">
+                      {orgInfo?.phone ? (
+                        <a
+                          href={formatTelHref(orgInfo.phone)}
+                          className="h-12 px-6 bg-[#0F5F5C] hover:bg-[#0B4644] text-white rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all shadow-sm"
+                        >
+                          <span className="material-symbols-outlined text-[20px]">phone_in_talk</span>
+                          <span>Call {orgInfo.name || "Care Desk"} ({orgInfo.phone})</span>
+                        </a>
+                      ) : (
+                        <div className="h-12 px-6 bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] rounded-xl text-xs font-semibold flex items-center justify-center gap-2">
+                          <span>Care desk number not available</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </section>
+
+                {/* 3. Bento Grid: Medicines (Left) & Staff Health Updates (Right) */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  {/* Left Column: Today's Medicines & Incidents (7 Cols) */}
+                  <div className="lg:col-span-7 flex flex-col gap-8">
+                    {/* A. TODAY'S MEDICINES */}
+                    <div className="bg-white rounded-2xl border border-[#E8E2D8] shadow-sm p-6 md:p-8 flex flex-col gap-6">
+                      <div className="flex items-center justify-between pb-2 border-b border-[#E8E2D8]">
+                        <div>
+                          <span className="text-xs uppercase tracking-wider text-[#0F5F5C] font-bold">
+                            Live Dosage Telemetry
+                          </span>
+                          <h2 className="text-xl font-bold text-[#1C2826]">Today&apos;s Medicines</h2>
+                        </div>
+                        <span className="px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] text-xs font-semibold">
+                          {activeResident.room} Queue
+                        </span>
+                      </div>
+
+                      {residentMedicines.length === 0 ? (
+                        <p className="text-xs text-[#5A6563] py-4 text-center">
+                          No prescription doses scheduled for today.
+                        </p>
+                      ) : (
+                        <div className="flex flex-col gap-4">
+                          {residentMedicines.map(({ med, givenLog, isOverdue, overdueMinutes }) => (
+                            <div
+                              key={med.id}
+                              className={`p-5 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-colors ${
+                                isOverdue
+                                  ? "bg-amber-50/50 border-amber-300"
+                                  : givenLog
+                                  ? "bg-[#E8F3EE]/40 border-[#BDE0D1]"
+                                  : "bg-white border-[#E8E2D8]"
+                              }`}
+                            >
+                              <div className="flex items-center gap-4">
+                                <div
+                                  className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+                                    givenLog
+                                      ? "bg-[#E8F3EE] text-[#0F5F5C] border border-[#BDE0D1]"
+                                      : isOverdue
+                                      ? "bg-amber-100 text-amber-900 border border-amber-300"
+                                      : "bg-[#FAF7F2] text-[#5A6563] border border-[#E8E2D8]"
+                                  }`}
+                                >
+                                  <span className="material-symbols-outlined text-2xl">medication</span>
+                                </div>
+
+                                <div className="flex flex-col">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-xs font-bold text-[#1C2826]">
+                                      {convert24to12(med.time)}
+                                    </span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8E2D8]"></span>
+                                    <span className="text-xs text-[#0F5F5C] font-semibold">{med.dose}</span>
+                                  </div>
+                                  <h3 className="text-lg font-bold text-[#1C2826]">{med.name}</h3>
+                                  <p className="text-xs text-[#5A6563]">{med.instructions || "Standard dose"}</p>
+                                </div>
+                              </div>
+
+                              <div className="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto pt-2 sm:pt-0">
+                                {givenLog ? (
+                                  <div className="inline-flex items-center gap-1 px-3 py-1 bg-[#E8F3EE] text-[#0F5F5C] border border-[#BDE0D1] rounded-full text-xs font-bold shadow-sm">
+                                    <span className="material-symbols-outlined text-[16px]">check_circle</span>
+                                    <span>Given Today</span>
+                                  </div>
+                                ) : isOverdue ? (
+                                  <div className="inline-flex items-center gap-1 px-3 py-1 bg-amber-100 text-amber-900 border border-amber-300 rounded-full text-xs font-bold">
+                                    <span className="material-symbols-outlined text-[16px]">warning</span>
+                                    <span>Overdue (+{overdueMinutes}m)</span>
+                                  </div>
+                                ) : (
+                                  <div className="inline-flex items-center gap-1 px-3 py-1 bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] rounded-full text-xs font-semibold">
+                                    <span className="material-symbols-outlined text-[16px]">schedule</span>
+                                    <span>Pending</span>
+                                  </div>
+                                )}
+                                <span className="text-[11px] text-[#5A6563] mt-1">
+                                  {givenLog ? `Logged by: ${givenLog.givenBy}` : "Supervised by floor nurse"}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* B. SAFETY TIMELINE (LAST 7 DAYS) */}
+                    <div className="bg-white rounded-2xl border border-[#E8E2D8] shadow-sm p-6 md:p-8 flex flex-col gap-6">
+                      <div className="flex items-center justify-between pb-2 border-b border-[#E8E2D8]">
+                        <div>
+                          <span className="text-xs uppercase tracking-wider text-[#0F5F5C] font-bold">
+                            Safety Timeline
+                          </span>
+                          <h2 className="text-xl font-bold text-[#1C2826]">Recent Care Alerts &amp; Stepper</h2>
+                        </div>
+                        <span className="px-3 py-1 rounded-full bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] text-xs font-semibold">
+                          Past 7 Days
+                        </span>
+                      </div>
+
+                      {residentAlerts.length === 0 ? (
+                        <div className="p-8 text-center flex flex-col items-center gap-2">
+                          <span className="material-symbols-outlined text-3xl text-[#0F5F5C]">verified_user</span>
+                          <p className="text-sm font-bold text-[#1C2826]">No incidents recorded</p>
+                          <p className="text-xs text-[#5A6563]">
+                            All care protocols and dosage schedules have been verified without escalation.
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col gap-6">
+                          {residentAlerts.map((alert) => (
+                            <div
+                              key={alert.id}
+                              className={`p-5 rounded-2xl border flex flex-col gap-4 ${
+                                alert.type === "sos"
+                                  ? "bg-red-50/50 border-red-200"
+                                  : "bg-amber-50/50 border-amber-200"
+                              }`}
+                            >
+                              <div className="flex items-center justify-between">
+                                <span className="text-xs font-black uppercase tracking-wider text-[#5A6563]">
+                                  {alert.type === "sos" ? "Emergency SOS Incident" : "Missed Dose Notice"}
+                                </span>
+                                <span
+                                  className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
+                                    alert.status === "resolved"
+                                      ? "bg-[#E8F3EE] text-[#0F5F5C]"
+                                      : alert.status === "escalated"
+                                      ? "bg-red-700 text-white"
+                                      : "bg-amber-200 text-amber-900"
+                                  }`}
+                                >
+                                  {alert.status === "escalated"
+                                    ? "ESCALATED (108 CALL REQUIRED)"
+                                    : alert.status.toUpperCase()}
+                                </span>
+                              </div>
+
+                              <p className="text-sm font-bold text-[#1C2826]">
+                                {alert.message || "Care notice logged for resident."}
+                              </p>
+
+                              {/* Stepper matching Admin */}
+                              <div className="bg-white border border-[#E8E2D8] rounded-xl p-4 flex flex-col gap-3">
+                                <span className="text-[11px] font-bold text-[#5A6563] uppercase tracking-wider">
+                                  Incident Progression Steps
+                                </span>
+
+                                <div className="flex flex-col gap-3 relative pl-3 before:absolute before:left-4 before:top-2 before:bottom-2 before:w-0.5 before:bg-[#E8E2D8]">
+                                  {alert.timeline.map((step, idx) => (
+                                    <div key={idx} className="flex items-start gap-3 relative">
+                                      <div className="w-6 h-6 rounded-full bg-[#0F5F5C] text-white flex items-center justify-center text-xs shrink-0 z-10 shadow-sm">
+                                        <span className="material-symbols-outlined text-[14px]">check</span>
+                                      </div>
+                                      <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-[#1C2826]">{step.step}</span>
+                                        <span className="text-[10px] text-[#5A6563]">
+                                          By: {step.by} • {step.at}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+
+                                {alert.status === "escalated" && (
+                                  <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-red-200">
+                                    <a
+                                      href="tel:108"
+                                      className="px-3 py-1.5 bg-red-700 text-white rounded-lg text-xs font-bold hover:bg-red-800 transition-colors flex items-center gap-1 shadow-sm"
+                                    >
+                                      <span className="material-symbols-outlined text-[14px]">call</span>
+                                      <span>Call 108 Ambulance</span>
+                                    </a>
+                                    {orgInfo?.phone ? (
+                                      <a
+                                        href={formatTelHref(orgInfo.phone)}
+                                        className="px-3 py-1.5 bg-[#FAF7F2] border border-[#E8E2D8] text-[#1C2826] rounded-lg text-xs font-bold hover:bg-[#F3EEE6] transition-colors flex items-center gap-1 shadow-sm"
+                                      >
+                                        <span className="material-symbols-outlined text-[14px]">phone</span>
+                                        <span>Care Desk: {orgInfo.phone}</span>
+                                      </a>
+                                    ) : (
+                                      <span className="px-3 py-1.5 bg-[#FAF7F2] border border-[#E8E2D8] text-[#5A6563] rounded-lg text-xs font-medium">
+                                        Care desk number not available
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Right Column: Staff Health Updates (With Date & Time) (5 Cols) */}
+                  <div className="lg:col-span-5 flex flex-col gap-8">
+                    <div className="bg-white rounded-2xl border border-[#E8E2D8] shadow-sm p-6 md:p-8 flex flex-col gap-6">
+                      <div className="flex items-center justify-between pb-2 border-b border-[#E8E2D8]">
+                        <div>
+                          <span className="text-xs uppercase tracking-wider text-[#0F5F5C] font-bold">
+                            Direct Observation
+                          </span>
+                          <h2 className="text-xl font-bold text-[#1C2826]">Staff Health Updates</h2>
+                        </div>
+                        <span className="w-8 h-8 rounded-full bg-[#FAF7F2] border border-[#E8E2D8] flex items-center justify-center text-[#0F5F5C]">
+                          <span className="material-symbols-outlined text-[18px]">vital_signs</span>
+                        </span>
+                      </div>
+
+                      {residentHealthUpdates.length === 0 ? (
+                        <p className="text-xs text-[#5A6563] py-4 text-center">
+                          No vitals updates posted today yet. Staff will log morning observations shortly.
+                        </p>
+                      ) : (
+                        <div className="relative flex flex-col gap-6 pl-6 before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-[#E8E2D8]">
+                          {residentHealthUpdates.map((update) => (
+                            <div key={update.id} className="relative flex flex-col gap-1.5">
+                              <span className="absolute -left-6 top-1.5 w-4 h-4 rounded-full bg-[#0F5F5C] ring-4 ring-white"></span>
+                              <div className="flex flex-wrap items-center gap-2 text-xs text-[#5A6563]">
+                                {/* Showing DATE AND TIME on each health update */}
+                                <span className="font-bold text-[#1C2826]">
+                                  {formatDateTime(update.createdAt)}
+                                </span>
+                                <span>•</span>
+                                <span className="font-bold text-[#0F5F5C]">Mood: {update.mood}</span>
+                                {update.bp && update.bp !== "N/A" && (
+                                  <>
+                                    <span>•</span>
+                                    <span>BP: <strong>{update.bp}</strong></span>
+                                  </>
+                                )}
+                                {update.pulse && update.pulse !== "N/A" && (
+                                  <>
+                                    <span>•</span>
+                                    <span>Pulse: <strong>{update.pulse}</strong></span>
+                                  </>
+                                )}
+                              </div>
+                              <p className="text-sm text-[#1C2826] font-medium leading-relaxed">
+                                {update.note}
+                              </p>
+                              <div className="flex items-center gap-2 mt-0.5 text-xs text-[#5A6563]">
+                                <span className="material-symbols-outlined text-[15px] text-[#0F5F5C]">badge</span>
+                                <span>Logged by {update.byName}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Direct Care Desk Contact */}
+                      <div className="p-4 bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl flex flex-col gap-2.5">
+                        <div className="flex items-center gap-2">
+                          <span className="material-symbols-outlined text-[18px] text-[#0F5F5C]">support_agent</span>
+                          <span className="text-xs text-[#1C2826] font-bold">
+                            Direct Contact: {activeResident.room} Floor Care Desk
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#5A6563] leading-relaxed">
+                          For special requests, medication updates, or daily coordination, contact the on-duty floor nursing team:
+                        </p>
+                        {orgInfo?.phone ? (
+                          <a
+                            href={formatTelHref(orgInfo.phone)}
+                            className="h-10 px-4 bg-[#0F5F5C] hover:bg-[#0B4644] text-white rounded-xl text-xs font-bold shrink-0 flex items-center justify-center gap-2 shadow-sm transition-all"
+                          >
+                            <span className="material-symbols-outlined text-[18px]">phone_in_talk</span>
+                            <span>Call {orgInfo.name || "Care Desk"} ({orgInfo.phone})</span>
+                          </a>
+                        ) : (
+                          <div className="h-10 px-4 bg-[#E8E2D8]/50 text-[#5A6563] rounded-xl text-xs font-semibold shrink-0 flex items-center justify-center gap-2">
+                            <span>Care desk number not available</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+          </>
+        )}
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="w-full bg-[#FAF7F2] border-t border-[#E8E2D8] py-8">
+          <div className="max-w-[1280px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-[#5A6563]">
+            <p>© 2026 Aastha Senior Community Care India</p>
+            <a
+              href="tel:14567"
+              className="hover:text-[#0F5F5C] transition-colors font-bold flex items-center gap-1.5"
+            >
+              <span className="material-symbols-outlined text-[16px]">phone_in_talk</span>
+              <span>Elderline 14567 (Govt. of India)</span>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </ProtectedRoute>
+  );
 }
